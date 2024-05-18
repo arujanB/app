@@ -20,12 +20,12 @@ final class MainCoordinator: Coordinator {
 
 extension MainCoordinator {
     func makeMain() {
-        var vc = moduleFactory.makeMain(delegate: self)
-        router.push(vc)
+        let vc = moduleFactory.makeMain(delegate: self)
+        router.setRootModule(vc)
     }
     
-    func makeVC() {
-        var vc = moduleFactory.makeVC()
+    func makeMainDetail() {
+        let vc = moduleFactory.makeMainDetail(delegate: self)
         router.push(vc)
     }
     
@@ -35,6 +35,12 @@ extension MainCoordinator {
 
 extension MainCoordinator: MainViewControllerDelegate {
     func moveVC() {
-        makeVC()
+        makeMainDetail()
     }
+}
+
+// MARK: BacketViewControllerDelegate
+
+extension MainCoordinator: MainDetailViewControllerDelegate {
+    
 }

@@ -2,14 +2,16 @@ import Foundation
 
 class AppCoordinator: Coordinator {
     override func start() {
-        let coordinator = MainCoordinator(router: router, delegate: self)
+        let coordinator = TabBarCoordinator(router: router, delegate: self)
         addDependency(coordinator)
         coordinator.start()
     }
 }
 
-extension AppCoordinator: MainCoordinatorDelegate {
-    func didFinish(_ coordinator: MainCoordinator) {
+// MARK: - MainCoordinatorDelegate
+
+extension AppCoordinator: TabBarCoordinatorDelegate {
+    func didFinish(_ coordinator: TabBarCoordinator) {
         removeDependency(coordinator)
     }
 }

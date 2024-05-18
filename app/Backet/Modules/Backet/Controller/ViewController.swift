@@ -1,11 +1,25 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+protocol BacketViewControllerDelegate: AnyObject {
+    
+}
+
+final class ViewController: UIViewController {
+    private weak var delegate: BacketViewControllerDelegate?
 
     private let moveButton = UIButton().apply {
-        $0.setTitle("move", for: .normal)
+        $0.setTitle("backet", for: .normal)
         $0.addTarget(self, action: #selector(clickMe), for: .touchUpInside)
+    }
+    
+    init(delegate: BacketViewControllerDelegate) {
+        self.delegate = delegate
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
@@ -16,7 +30,7 @@ class ViewController: UIViewController {
     }
     
     @objc private func clickMe() {
-        print("move")
+        print("BASKET VC")
     }
 }
 

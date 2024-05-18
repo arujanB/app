@@ -21,4 +21,9 @@ class Router: NSObject {
             self?.navigationController.pushViewController(viewController, animated: animated)
         }
     }
+    
+    public func setRootModule(_ viewController: UIViewController, isNavigationBarHidden: Bool = false) {
+        navigationController.setViewControllers([viewController], animated: false)
+        navigationController.isNavigationBarHidden = isNavigationBarHidden
+    }
 }
