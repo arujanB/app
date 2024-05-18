@@ -30,7 +30,7 @@ final class MainViewController: UIViewController {
     }
     
     @objc private func clickMe() {
-        print("move")
+        print("MAIN VC")
         delegate?.moveVC()
     }
 }
