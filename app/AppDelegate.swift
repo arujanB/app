@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  app
-//
-//  Created by Aruzhan Boranbay on 17.05.2024.
-//
-
 import UIKit
 import CoreData
 
