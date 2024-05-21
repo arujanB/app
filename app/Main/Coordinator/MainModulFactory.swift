@@ -5,7 +5,7 @@ final class MainModulFactory {
         return MainViewController(delegate: delegate)
     }
     
-    func makeMainDetail(delegate: MainDetailViewControllerDelegate) -> MainDetailViewController {
-        return MainDetailViewController(delegate: delegate)
+    func makeMainDetail(delegate: MainDetailViewControllerDelegate, mainModel: MainModel) -> MainDetailViewController {
+        return MainDetailViewController(delegate: delegate, model: mainModel)
     }
 }

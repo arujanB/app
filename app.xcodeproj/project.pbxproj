@@ -31,6 +31,13 @@
 		79505F952BF8ADD900C2939B /* BacketCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79505F942BF8ADD900C2939B /* BacketCoordinator.swift */; };
 		79505F992BF8BAEA00C2939B /* BacketModulFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79505F982BF8BAEA00C2939B /* BacketModulFactory.swift */; };
 		79505F9E2BF8C6E500C2939B /* MainDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79505F9D2BF8C6E500C2939B /* MainDetailViewController.swift */; };
+		795270672BFB56E5002D0F05 /* MainTableViewDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795270662BFB56E5002D0F05 /* MainTableViewDelegateImpl.swift */; };
+		795270692BFB57B1002D0F05 /* MainTableViewDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795270682BFB57B1002D0F05 /* MainTableViewDataSourceImpl.swift */; };
+		7952706C2BFB58E0002D0F05 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952706B2BFB58E0002D0F05 /* MainTableViewCell.swift */; };
+		795270712BFB62D5002D0F05 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795270702BFB62D5002D0F05 /* MainModel.swift */; };
+		795270732BFB647A002D0F05 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795270722BFB647A002D0F05 /* ViewModel.swift */; };
+		795270752BFB65A0002D0F05 /* MainSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795270742BFB65A0002D0F05 /* MainSection.swift */; };
+		79B921892BFB9A3E00A0E6B7 /* ProductCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B921882BFB9A3E00A0E6B7 /* ProductCategoryCollectionViewCell.swift */; };
 		BE219BBEA2C2A7FE16AE9F8E /* Pods_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD144B834C278826CCDEF91 /* Pods_app.framework */; };
 		DC8C23B70EBEC53253BCC705 /* Pods_app_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C669ECF9DBA0A468549F49 /* Pods_app_appUITests.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +92,13 @@
 		79505F942BF8ADD900C2939B /* BacketCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BacketCoordinator.swift; sourceTree = "<group>"; };
 		79505F982BF8BAEA00C2939B /* BacketModulFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BacketModulFactory.swift; sourceTree = "<group>"; };
 		79505F9D2BF8C6E500C2939B /* MainDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDetailViewController.swift; sourceTree = "<group>"; };
+		795270662BFB56E5002D0F05 /* MainTableViewDelegateImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewDelegateImpl.swift; sourceTree = "<group>"; };
+		795270682BFB57B1002D0F05 /* MainTableViewDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewDataSourceImpl.swift; sourceTree = "<group>"; };
+		7952706B2BFB58E0002D0F05 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		795270702BFB62D5002D0F05 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		795270722BFB647A002D0F05 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		795270742BFB65A0002D0F05 /* MainSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSection.swift; sourceTree = "<group>"; };
+		79B921882BFB9A3E00A0E6B7 /* ProductCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		A22B6343634BD97726F07DA8 /* Pods-app-appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-appUITests.release.xcconfig"; path = "Target Support Files/Pods-app-appUITests/Pods-app-appUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C931B22E0272213DE8787FB4 /* Pods-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.release.xcconfig"; path = "Target Support Files/Pods-app/Pods-app.release.xcconfig"; sourceTree = "<group>"; };
 		EC824F30A1DA252F0C39470F /* Pods-appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appTests.release.xcconfig"; path = "Target Support Files/Pods-appTests/Pods-appTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +168,8 @@
 		792DF5C92BF775E700E39877 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				7952706E2BFB62BD002D0F05 /* Domain */,
+				7952706D2BFB6235002D0F05 /* Resources */,
 				79505F8A2BF8A32800C2939B /* TabBar */,
 				792DF6032BF78F3100E39877 /* Main */,
 				79505F932BF8ADC100C2939B /* Backet */,
@@ -161,8 +177,6 @@
 				792DF5FD2BF78C6D00E39877 /* Navigation */,
 				792DF5CA2BF775E700E39877 /* AppDelegate.swift */,
 				792DF5CC2BF775E700E39877 /* SceneDelegate.swift */,
-				792DF5D62BF775E900E39877 /* Assets.xcassets */,
-				792DF5D82BF775E900E39877 /* LaunchScreen.storyboard */,
 				792DF5DB2BF775E900E39877 /* Info.plist */,
 				792DF5D32BF775E700E39877 /* app.xcdatamodeld */,
 			);
@@ -327,7 +341,10 @@
 		79505FA02BF8C71600C2939B /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				795270652BFB56CF002D0F05 /* TableView */,
+				7952706A2BFB58B6002D0F05 /* View */,
 				792DF6092BF791AB00E39877 /* Controller */,
+				795270722BFB647A002D0F05 /* ViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -346,6 +363,50 @@
 				79505F972BF8ADF400C2939B /* Controller */,
 			);
 			path = Backet;
+			sourceTree = "<group>";
+		};
+		795270652BFB56CF002D0F05 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				795270682BFB57B1002D0F05 /* MainTableViewDataSourceImpl.swift */,
+				795270662BFB56E5002D0F05 /* MainTableViewDelegateImpl.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		7952706A2BFB58B6002D0F05 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7952706B2BFB58E0002D0F05 /* MainTableViewCell.swift */,
+				79B921882BFB9A3E00A0E6B7 /* ProductCategoryCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7952706D2BFB6235002D0F05 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				792DF5D62BF775E900E39877 /* Assets.xcassets */,
+				792DF5D82BF775E900E39877 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7952706E2BFB62BD002D0F05 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				7952706F2BFB62C6002D0F05 /* Main */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		7952706F2BFB62C6002D0F05 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				795270702BFB62D5002D0F05 /* MainModel.swift */,
+				795270742BFB65A0002D0F05 /* MainSection.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		9E4D836EAC980665B801B3A1 /* Pods */ = {
@@ -602,11 +663,17 @@
 				79505F952BF8ADD900C2939B /* BacketCoordinator.swift in Sources */,
 				792DF6122BF7A44B00E39877 /* AppCoordinator.swift in Sources */,
 				792DF5CF2BF775E700E39877 /* ViewController.swift in Sources */,
+				795270692BFB57B1002D0F05 /* MainTableViewDataSourceImpl.swift in Sources */,
 				792DF6062BF78FBB00E39877 /* MainCoordinator.swift in Sources */,
+				795270732BFB647A002D0F05 /* ViewModel.swift in Sources */,
 				792DF5D52BF775E700E39877 /* app.xcdatamodeld in Sources */,
+				795270712BFB62D5002D0F05 /* MainModel.swift in Sources */,
+				795270672BFB56E5002D0F05 /* MainTableViewDelegateImpl.swift in Sources */,
 				79505F992BF8BAEA00C2939B /* BacketModulFactory.swift in Sources */,
 				79505F9E2BF8C6E500C2939B /* MainDetailViewController.swift in Sources */,
+				79B921892BFB9A3E00A0E6B7 /* ProductCategoryCollectionViewCell.swift in Sources */,
 				792DF6002BF78C9800E39877 /* Coordinator.swift in Sources */,
+				7952706C2BFB58E0002D0F05 /* MainTableViewCell.swift in Sources */,
 				79505F902BF8A44800C2939B /* TabBarViewContoller.swift in Sources */,
 				792DF5CB2BF775E700E39877 /* AppDelegate.swift in Sources */,
 				79505F8C2BF8A34600C2939B /* TabBarCoordinator.swift in Sources */,
@@ -616,6 +683,7 @@
 				792DF60D2BF79A4300E39877 /* InlineConfigurable.swift in Sources */,
 				792DF5CD2BF775E700E39877 /* SceneDelegate.swift in Sources */,
 				792DF6082BF7911A00E39877 /* MainModulFactory.swift in Sources */,
+				795270752BFB65A0002D0F05 /* MainSection.swift in Sources */,
 				79505F922BF8A8C300C2939B /* TabBarCoordinatorFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,8 +24,8 @@ extension MainCoordinator {
         router.setRootModule(vc)
     }
     
-    func makeMainDetail() {
-        let vc = moduleFactory.makeMainDetail(delegate: self)
+    func makeMainDetail(mainModel: MainModel) {
+        let vc = moduleFactory.makeMainDetail(delegate: self, mainModel: mainModel)
         router.push(vc)
     }
     
@@ -34,8 +34,8 @@ extension MainCoordinator {
 // MARK: MainViewControllerDelegate
 
 extension MainCoordinator: MainViewControllerDelegate {
-    func moveVC() {
-        makeMainDetail()
+    func moveVC(model: MainModel) {
+        makeMainDetail(mainModel: model)
     }
 }
 

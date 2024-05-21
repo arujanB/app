@@ -30,7 +30,7 @@ final class ViewController: UIViewController {
     }
     
     @objc private func clickMe() {
-        print("BASKET VC")
+        print("BACKET VC")
     }
 }
 
