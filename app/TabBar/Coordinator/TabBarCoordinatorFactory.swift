@@ -8,9 +8,9 @@ final class TabBarCoordinatorFactory {
         return (coordinator, navigationController)
     }
     
-    func makeBasketVC(delegate: BacketCoordinatorDelegate) -> (Coordinator, UIViewController) {
+    func makeBasketVC(delegate: BasketCoordinatorDelegate) -> (Coordinator, UIViewController) {
         let navigationController = UINavigationController()
-        let coordinator = BacketCoordinator(router: .init(navigationController: navigationController), delegate: delegate)
+        let coordinator = BasketCoordinator(router: .init(navigationController: navigationController), delegate: delegate)
         return (coordinator, navigationController)
     }
 }

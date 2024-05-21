@@ -2,15 +2,22 @@ import UIKit
 import SnapKit
 
 protocol MainViewControllerDelegate: AnyObject {
-    func moveVC()
+    func moveVC(model: MainModel)
 }
 
 final class MainViewController: UIViewController {
     private weak var delegate: MainViewControllerDelegate?
+    private lazy var tableViewdataSourceImpl = MainTableViewDataSourceImpl(sections: storeViewModel.storeData)
+    private lazy var tableViewdelegateImpl = MainTableViewDelegateImpl(sections: storeViewModel.storeData)
+    private let storeViewModel: ViewModel = ViewModel()
     
-    private let moveButton = UIButton().apply {
-        $0.setTitle("move", for: .normal)
-        $0.addTarget(self, action: #selector(clickMe), for: .touchUpInside)
+    private lazy var tableView = UITableView(frame: .zero, style: .grouped).apply {
+        $0.dataSource = tableViewdataSourceImpl
+        $0.delegate = tableViewdelegateImpl
+        $0.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.identifire)
+        $0.sectionFooterHeight = 0
+//        $0.showsVerticalScrollIndicator = false
+//        $0.separatorStyle = .none
     }
     
     init(delegate: MainViewControllerDelegate) {
@@ -24,25 +31,22 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
         setupViews()
         setupConstraints()
-    }
-    
-    @objc private func clickMe() {
-        print("MAIN VC")
-        delegate?.moveVC()
+        tableViewdelegateImpl.callback = { [weak self] model in
+            self?.delegate?.moveVC(model: model)
+        }
     }
 }
 
-extension MainViewController {
+private extension MainViewController {
     func setupViews() {
-        view.addSubview(moveButton)
+        view.addSubview(tableView)
     }
     
     func setupConstraints() {
-        moveButton.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+        tableView.snp.makeConstraints { make in
+            make.edges.equalTo(view.safeAreaLayoutGuide)
         }
     }
 }

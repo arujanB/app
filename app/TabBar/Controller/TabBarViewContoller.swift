@@ -6,7 +6,7 @@ struct TabBarItem {
     let vc: UIViewController
 }
 
-class TabBarViewContoller: UITabBarController {
+final class TabBarViewContoller: UITabBarController {
     let items: [TabBarItem]
     
     init(items: [TabBarItem]) {
@@ -22,6 +22,8 @@ class TabBarViewContoller: UITabBarController {
         super.viewDidLoad()
         configureTabBarItems()
         view.backgroundColor = .yellow
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.navigationBar.backgroundColor = .black
     }
     
     func configureTabBarItems() {
