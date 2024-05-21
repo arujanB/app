@@ -15,6 +15,7 @@ final class MainViewController: UIViewController {
         $0.dataSource = tableViewdataSourceImpl
         $0.delegate = tableViewdelegateImpl
         $0.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.identifire)
+        $0.sectionFooterHeight = 0
 //        $0.showsVerticalScrollIndicator = false
 //        $0.separatorStyle = .none
     }
@@ -30,18 +31,15 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
         setupViews()
         setupConstraints()
-        navigationController?.navigationBar.backgroundColor = .orange
         tableViewdelegateImpl.callback = { [weak self] model in
-            print("delegate move")
             self?.delegate?.moveVC(model: model)
         }
     }
 }
 
-extension MainViewController {
+private extension MainViewController {
     func setupViews() {
         view.addSubview(tableView)
     }

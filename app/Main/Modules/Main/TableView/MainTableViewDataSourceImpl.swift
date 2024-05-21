@@ -20,9 +20,6 @@ extension MainTableViewDataSourceImpl: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MainTableViewCell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifire, for: indexPath) as! MainTableViewCell
-//        cell.callBack = {
-//            print("callback")
-//        }
         switch sections[indexPath.section].rows[indexPath.row] {
         case let .rows(rowModel: model):
             cell.configure(model: model)

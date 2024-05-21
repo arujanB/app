@@ -1,10 +1,10 @@
 import Foundation
 import UIKit
 
-struct MainModel {
-    var name: String
-    var img: UIImage
-    var price: Int
-    var type: ProductType
-    var isLike: Bool
+struct MainModel: Codable {
+    let name: String
+    let img: String
+    let price: String
+    let type: ProductType?
+    var isLike: Bool = false
 }

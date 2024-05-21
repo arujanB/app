@@ -1,9 +1,20 @@
 import Foundation
 
-enum ProductType {
+enum ProductType: Codable {
     case milk
     case vegatable
     case fruits
+    
+    var title: String {
+        switch self {
+        case .fruits:
+            "fruits"
+        case .milk:
+            "milk"
+        case .vegatable:
+            "vegatable"
+        }
+    }
 }
 
 //enum MainSection {

@@ -23,7 +23,6 @@ final class TabBarViewContoller: UITabBarController {
         configureTabBarItems()
         view.backgroundColor = .yellow
         navigationController?.navigationBar.prefersLargeTitles = false
-//        navigationController?.isNavigationBarHidden = true
         navigationController?.navigationBar.backgroundColor = .black
     }
     

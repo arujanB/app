@@ -26,8 +26,8 @@ extension TabBarCoordinator {
         let basketVC = coordinatorFactory.makeBasketVC(delegate: self)
         
         itemsArray = [
-            .init(title: "Main", logo: UIImage(systemName: "home") ?? UIImage(), vc: mainVC.1),
-            .init(title: "Backet", logo: UIImage(systemName: "backet") ?? UIImage(), vc: basketVC.1)
+            .init(title: "Main", logo: UIImage(systemName: "circle") ?? UIImage(), vc: mainVC.1),
+            .init(title: "Basket", logo: UIImage(systemName: "basket") ?? UIImage(), vc: basketVC.1)
         ]
         
         addDependency(mainVC.0)
@@ -52,6 +52,6 @@ extension TabBarCoordinator: MainCoordinatorDelegate {
 
 // MARK: - BacketCoordinatorDelegate
 
-extension TabBarCoordinator: BacketCoordinatorDelegate {
+extension TabBarCoordinator: BasketCoordinatorDelegate {
     
 }
